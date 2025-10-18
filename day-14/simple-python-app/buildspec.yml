@@ -24,8 +24,11 @@ phases:
   post_build:
     commands:
       - echo "Build completed successfully!"
+      - cd $CODEBUILD_SRC_DIR
+      - pwd
+      - ls
 artifacts:
   files:
     - '**/*'
-  base-directory: ../simple-python-app
+  base-directory: day-14/simple-python-app
 
